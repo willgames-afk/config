@@ -1,0 +1,3 @@
+xterm*faceName: Monospace:size=9
+xterm*renderFont: true
+xterm*metaSendsEscape: true
