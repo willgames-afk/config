@@ -3,13 +3,13 @@
 addpkg() {
 	if ! [ -x "$(command -v $1)" ]; then
 		echo "[applyconfig] installing $1"
-		apt-get install $1 -y
+		sudo apt-get install $1 -y
 	fi
 }
 
 # install stuff if needed
 echo "[applyconfig] updating..."
-if ! apt-get update 1> /dev/null ; then
+if ! sudo apt-get update 1> /dev/null ; then
 	echo "failed to apt-get update, are you root?"
 	exit 1
 fi
