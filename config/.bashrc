@@ -90,4 +90,4 @@ alias ls='ls -Ahtr --color=auto --time-style=locale'
 
 # ble.sh
 source -- ~/.local/share/blesh/ble.sh
-xmodmap /home/beaver/.config/X11/xmodmap
+xmodmap ~/.config/X11/xmodmap
