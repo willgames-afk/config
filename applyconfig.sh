@@ -25,7 +25,12 @@ bash ble-nightly/ble.sh --install ~/.local/share
 echo "[applyconfig] configuring..."
 
 # Setup dotfiles from config dir
-if ! cp -r config/ -t ~/ ; then exit 1; fi
+cp .bashrc ~/.bashrc
+cp init.el ~/.config/emacs/init.el
+cp simpc-mode.el ~/.config/emacs/extensions/simpc-mode.el
+cp xmodmap ~/.config/X11/xmodmap
+cp i3config ~/.config/i3/config
+
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 echo "[applyconfig] success!"
