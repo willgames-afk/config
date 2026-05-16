@@ -1,0 +1,12 @@
+Task: kam-install
+Relevance: 1
+Section: user
+Description: i3 with some utils
+	This installs i3, firefox, and some other stuff
+Key:
+	tasksel
+	xorg
+	xserver-xorg-video-all
+	xserver-xorg-input-all
+	i3
+	firefox-esr

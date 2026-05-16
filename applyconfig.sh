@@ -19,10 +19,15 @@ if ! [ -e "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
 	#only add firefox if not in wsl
 	addpkg firefox-esr
 fi
+curl -L https://github.com/akinomyoga/ble.sh/releases/download/nightly/ble-nightly.tar.xz | tar xJf -
+bash ble-nightly/ble.sh --install ~/.local/share
+
 echo "[applyconfig] configuring..."
 
 # Setup dotfiles from config dir
 if ! cp -r config/ -t ~/ ; then exit 1; fi
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 echo "[applyconfig] success!"
 echo "[applyconfig] would you like to delete this repository from this device?"
 while true; do
